@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="scripts/util.js" charset="utf-8" defer></script>
+    <script src="scripts/login.js" charset="utf-8" defer></script>
+
+    <title>Meeting Agenda - Login</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+<div class="container mx-auto my-5" style="max-width: 600px">
+    <h1 class="my-2 text-center">Online Meeting Agenda</h1>
+    <div class="alert alert-danger mx-auto mt-4 text-center py-1" id="id_main_error_message" style="display: none">ERROR:
+    </div>
+    <div class="alert alert-success mx-auto mt-4 text-center py-1" id="id_main_success_message" style="display: none">
+        SUCCESS!
+    </div>
+
+    <div class="row mx-auto mt-4" id="id_login_section" style="display: block">
+        <div class="col">
+            <h4 class="text-center">Login</h4>
+            <form action="#">
+                <div class="form-group row">
+                    <label for="id_email_input" class="col-form-label">Email:</label>
+                    <input type="email" name="email" class="form-control" id="id_email_input"
+                           placeholder="email@meeting.com" required>
+                </div>
+                <div class="form-group row">
+                    <label for="id_password_input" class="col-form-label">Password:</label>
+                    <input type="password" name="password" class="form-control" id="id_password_input"
+                           placeholder="password"
+                           required>
+                </div>
+                <div class="form-group row">
+                    <div class="alert alert-danger mx-auto" id="id_error_message" style="display: none">ERROR: *ERROR
+                        TEXT*
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col text-center">
+                        <button type="button" class="btn btn-primary" id="id_login_button">Login</button>
+                    </div>
+                </div>
+            </form>
+            <div class="row mx-auto my-3">
+                <div class="col text-center">
+                    <button type="button" class="btn btn-link" id="id_switch_to_signup_button"
+                            onclick="showSignUp()">Sign Up
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mx-auto mt-4" id="id_signup_section" style="display: none">
+        <div class="col">
+            <h4 class="text-center">Sign Up</h4>
+            <form action="#">
+                <div class="form-group row">
+                    <label for="id_signup_email_input" class="col-form-label">Email:</label>
+                    <input type="email" name="email" class="form-control" id="id_signup_email_input"
+                           placeholder="email@meeting.com" required autocomplete="off">
+                </div>
+                <div class="form-group row">
+                    <label for="id_signup_name_input" class="col-form-label">Name:</label>
+                    <input type="text" name="displayedName" class="form-control" id="id_signup_name_input"
+                           placeholder="Giulio Cesare" required autocomplete="off">
+                </div>
+                <div class="form-group row">
+                    <label for="id_signup_password_input" class="col-form-label">Password:</label>
+                    <input type="password" name="password1" class="form-control" id="id_signup_password_input"
+                           placeholder="password"
+                           required autocomplete="new-password">
+                </div>
+                <div class="form-group row">
+                    <label for="id_signup_password_2_input" class="col-form-label">Confirm Password:</label>
+                    <input type="password" name="password2" class="form-control" id="id_signup_password_2_input"
+                           placeholder="password"
+                           required autocomplete="new-password">
+                </div>
+
+                <div class="form-group row">
+                    <div class="alert alert-danger mx-auto" id="id_signup_error_message" style="display: none">ERROR:
+                        *ERROR
+                        TEXT*
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col text-center">
+                        <button type="button" class="btn btn-primary" id="id_signup_login_button">Sign Up</button>
+                    </div>
+                </div>
+            </form>
+            <div class="row mx-auto my-3">
+                <div class="col text-center">
+                    <button type="button" class="btn btn-link" id="id_switch_to_login_button" onclick="showLogin()">
+                        Login
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center">
+            <a href="./ConnectionTester"> Test connection to DB</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
